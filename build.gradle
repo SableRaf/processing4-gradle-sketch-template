@@ -1,0 +1,20 @@
+plugins {
+    id("java")
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://jogamp.org/deployment/maven"
+    }
+}
+
+dependencies {
+    implementation("org.processing:core:4.3.4")
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
